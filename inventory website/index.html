@@ -52,6 +52,17 @@
 				cursor: pointer;
 			}
 			
+			/*categories table*/
+			table.categorytable {
+				width: 65%;
+			}
+			
+			td.categorytable {
+				border: 1px solid #dddddd;
+				text-align: left;
+				padding: 8px;
+			}
+			
 		</style>
 		
 	</head>
@@ -64,13 +75,30 @@
 		</div>
 		
 		<!-- Main search bar -->
-		<div class="searchbar" style="padding-top:1.5%; position: relative;">
+		<div class="searchbar" style="padding-top:1.5%; position: relative">
 			<center>
 				<form class="search" action="/php/querey.php" style="margin:auto;max-width:400px">
 					<input type="text" placeholder="Enter Keyword..." name="search">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
 			</center>
+		</div>
+		
+		<!-- Category buttons -->
+		<div class="categories" style="position: relative">
+			<table class="categorytable" style="margin:auto;max-width:800px; padding-top:2%">
+				<tr>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Chemistry</button></td>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Physics</button></td>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">General</button></td>
+				</tr>
+				<tr>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Biology</button></td>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Elementary</button></td>
+					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Misc</button></td>
+				</tr>
+			</table>
+			
 		</div>
 		
 	</body>
