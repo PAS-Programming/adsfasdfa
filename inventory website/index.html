@@ -72,7 +72,7 @@
 				float: center;
 				width: 50%;
 				padding: 7px;
-				background: #2196F3;
+				background: gray;
 				color: white;
 				font-size: 22px;
 				cursor: pointer;
@@ -95,10 +95,18 @@
 				position: absolute;
 				z-index: 1;
 			}
-
 			/*Display hidden hover text*/
 			.tooltip:hover .tooltiptext {
 				visibility: visible;
+			}
+			
+			/*Gradient background*/
+			body {
+				background: linear-gradient(to bottom, rgba(153,212, 249, 1) 0%, rgba(3,75, 82, 0) 100%);
+				height: 100%;
+				margin: 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
 			}
 			
 		</style>
