@@ -29,6 +29,29 @@
 				box-sizing: border-box;
 			}
 			
+			/*searchbox style and default text style*/
+			form.search input[type=text] {
+				padding: 10px;
+				font-size: 17px;
+				border: 1px solid grey;
+				float: left;
+				width: 80%;
+				background: #f1f1f1;
+			}
+			
+			/*search button style*/
+			form.search button {
+				float: left;
+				width: 20%;
+				padding: 10px;
+				background: #2196F3;
+				color: white;
+				font-size: 17px;
+				border: 1px solid grey;
+				border-left: none;
+				cursor: pointer;
+			}
+			
 		</style>
 		
 	</head>
@@ -43,7 +66,7 @@
 		<!-- Main search bar -->
 		<div class="searchbar" style="padding-top:1.5%; position: relative;">
 			<center>
-				<form class="search" action="querey.php">
+				<form class="search" action="querey.php" style="margin:auto;max-width:300px">
 					<input type="text" placeholder="Enter Keyword..." name="search">
 					<button type="submit"><i class="fa fa-search"></i></button>
 				</form>
