@@ -17,6 +17,9 @@
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+		<!-- Icons Script -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		
 		<style>
 			/*mobile*/
 			@viewport {
@@ -54,13 +57,23 @@
 			
 			/*categories table*/
 			table.categorytable {
-				width: 65%;
+				text-align: center;
+				width: 100%;
 			}
 			
 			td.categorytable {
-				border: 1px solid #dddddd;
-				text-align: left;
-				padding: 8px;
+				text-align: center;
+				padding: 2px;
+			}
+			
+			button.cat {
+				float: center;
+				width: 50%;
+				padding: 7px;
+				background: #2196F3;
+				color: white;
+				font-size: 22px;
+				cursor: pointer;
 			}
 			
 		</style>
@@ -86,16 +99,16 @@
 		
 		<!-- Category buttons -->
 		<div class="categories">
-			<table class="categorytable" style="margin:auto;max-width:800px; padding-top:2%">
+			<table class="categorytable" style="margin:auto;max-width:850px; padding-top:2%">
 				<tr>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Chemistry</button></td>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Physics</button></td>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">General</button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to chemistry')"><i class="fab fa-react"></i></button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to physics')"><i class="fas fa-truck-loading"></i></button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to General')"><i class="fas fa-cog"></i></button></td>
 				</tr>
 				<tr>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Biology</button></td>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Elementary</button></td>
-					<td class="categorytable"><button type="button" onclick="alert('there will be javascript here to perform an advanced querey')">Misc</button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Biology')"><i class="fas fa-dna"></i></button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Elemeentary')"><i class="fas fa-child"></i></button></td>
+					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Misc')"><i class="far fa-question-circle"></i></button></td>
 				</tr>
 			</table>
 			
