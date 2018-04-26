@@ -76,6 +76,26 @@
 				cursor: pointer;
 			}
 			
+			.tooltip {
+				position: relative;
+			}
+
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color: black;
+				color: #fff;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+			}
+
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+			}
+			
 		</style>
 		
 		
@@ -102,14 +122,55 @@
 		<div class="categories">
 			<table class="categorytable" style="margin:auto;max-width:850px; padding-top:2%">
 				<tr>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to chemistry')"><i class="fab fa-react"></i></button></td>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to physics')"><i class="fas fa-truck-loading"></i></button></td>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to General')"><i class="fas fa-cog"></i></button></td>
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to chemistry')">
+							<i class="fab fa-react">
+							</i>
+						</button>
+						<span class="tooltiptext">Chemistry</span></div>
+					</td>
+					
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to physics')">
+							<i class="fas fa-truck-loading">
+							</i>
+						</button>
+						<span class="tooltiptext">Physics</span></div>
+					</td>
+					
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to General')">
+							<i class="fas fa-cog">
+							</i>
+						</button>
+						<span class="tooltiptext">General</span></div>
+					</td>
 				</tr>
+				
 				<tr>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Biology')"><i class="fas fa-dna"></i></button></td>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Elemeentary')"><i class="fas fa-child"></i></button></td>
-					<td class="categorytable"><button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Misc')"><i class="far fa-question-circle"></i></button></td>
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Biology')">
+							<i class="fas fa-dna">
+							</i>
+						</button>
+						<span class="tooltiptext">Biology</span></div>
+					</td>
+					
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Elementary')">
+							<i class="fas fa-child">
+							</i>
+						</button>
+						<span class="tooltiptext">Elementary</span></div>
+					</td>
+					
+					<td class="categorytable"><div class="tooltip">
+						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Misc')">
+							<i class="far fa-question-circle">
+							</i>
+						</button>
+						<span class="tooltiptext">Misc</span></div>
+						</td>
 				</tr>
 			</table>
 			
