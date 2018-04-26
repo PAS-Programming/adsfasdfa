@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		
+		<!-- Meta Descriptions -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,14 +10,28 @@
 		<meta name="keywords" content="PAS Science Department Inventory" />
 		<meta name="description" content="Inventory of stuff in the science department">
 		<meta name="author" content="PAS WEB$SQL">
+		
+		<!-- Favicon -->
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	</head>
 	
 	<body>
 		
-		<div class="title" style="padding-top:2.5%">
+		<!-- Main title area -->
+		<div class="title" style="padding-top:2.5%; position: relative">
 			<center style="font-size:50px">PAS Science Inventory</center>
+		</div>
+		
+		<!-- Main search bar -->
+		<div class="searchbar" style="padding-top:1.5%; position: relative; left: 45%; margin-right: -50%">
+			<form class="search" action="querey.php">
+				<input type="text" placeholder="Enter Keyword..." name="search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
 		</div>
 		
 	</body>
