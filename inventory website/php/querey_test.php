@@ -18,5 +18,6 @@ if ($getResults == FALSE)
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
  echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
 }
+echo ("Ram ranch" . PHP_EOL);
 sqlsrv_free_stmt($getResults);
 ?>
