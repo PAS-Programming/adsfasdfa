@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- Meta Descriptions -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>PASSI Search Results</title>
+		<meta name="keywords" content="PASSI Search Results" />
+		<meta name="description" content="Search Result">
+		<meta name="author" content="PAS WEB$SQL">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Icons Script -->
+		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		
+		<style>
+			/*mobile*/
+			@viewport {
+				width: device-width ;
+				zoom: 1.0 ;
+			}
+			
+			/*searchbox sizing*/
+			* {
+				box-sizing: border-box;
+			}
+			
+			/*searchbox style and default text style*/
+			form.search input[type=text] {
+				padding: 10px;
+				font-size: 17px;
+				border: 1px solid grey;
+				float: left;
+				width: 80%;
+				background: #f1f1f1;
+			}
+			
+			/*search button style*/
+			form.search button {
+				float: left;
+				width: 20%;
+				padding: 10px;
+				background: #2196F3;
+				color: white;
+				font-size: 17px;
+				border: 1px solid grey;
+				border-left: none;
+				cursor: pointer;
+			}
+			
+			/*categories button styling*/
+			button.cat {
+				float: center;
+				width: 50%;
+				padding: 7px;
+				background: gray;
+				color: white;
+				font-size: 22px;
+				cursor: pointer;
+			}
+			
+			/*on-hover descriptions*/
+			.tooltip {
+				position: relative;
+			}
+			
+			/*on-hover text styling*/
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				width: 80px;
+				background-color: black;
+				color: #fff;
+				text-align: center;
+				border-radius: 6px;
+				padding: 5px 0;
+				position: absolute;
+				z-index: 1;
+			}
+			/*Display hidden hover text*/
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+			}
+			
+			/*Gradient background*/
+			body {
+				background: linear-gradient(to bottom, rgba(153,212, 249, 1) 27%, rgba(25,75, 182, 0) 100%);
+				height: 100%;
+				margin: 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+			}
+			
+		</style>
+		
+		
+	</head>
+	
+	<body style="background-color:#BDD8E3">
+		
+		<!-- Main title area -->
+		<div class="title" style="padding-top:1%">
+			<center style="font-size:3vw">PAS Science Inventory</center>
+		</div>
+		
+		<!-- Main search bar -->
+		<div class="searchbar" style="padding-top:1%">
+			<center>
+				<form class="search" action="/php/query.php" style="margin:auto;max-width:1000px">
+					<input type="text" placeholder="Enter Keyword..." name="search">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
+			</center>
+		</div>
+		
+	</body>
+	
+</html>

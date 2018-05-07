@@ -21,3 +21,16 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 echo ("Ram ranch" . PHP_EOL);
 sqlsrv_free_stmt($getResults);
 ?>
+
+<html>
+  <head>
+    <title>Sample "Hello, World" Application</title>
+  </head>
+  <body>
+
+
+    <p>This is the home page for the HelloWorld Web application. </p>
+    <p>To prove that they work, you can execute either of the following links:
+
+  </body>
+</html>
