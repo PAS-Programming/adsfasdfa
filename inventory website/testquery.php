@@ -138,12 +138,39 @@ while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
 	echo "\n";
   
 }
-echo "</tbody";
+echo "</tbody>";
 echo "\n";
 echo "\n";
-echo "</table";
+echo "</table>";
 echo "\n";
 echo "\n";
+echo "</div>";
+echo "\n";
+echo "\n";
+echo "</div>";
+echo "\n";
+echo "\n";
+echo "</div>";
+echo "\n";
+echo "\n";
+echo "</div>";
+echo "\n";
+echo "\n";
+
+echo '<script src="tablevendor/jquery/jquery-3.2.1.min.js"></script>';
+echo "\n";
+echo '<script src="tablevendor/bootstrap/js/popper.js"></script>';
+echo "\n";
+echo '<script src="tablevendor/bootstrap/js/bootstrap.min.js"></script>';
+echo "\n";
+echo '<script src="tablevendor/select2/select2.min.js"></script>';
+echo "\n";
+echo '<script src="tablejs/main.js"></script>';
+echo "\n";
+echo "</body>";
+echo "\n";
+echo "</html>";
+
 
 sqlsrv_free_stmt($getResults);
 ?>
