@@ -101,28 +101,49 @@ echo '<th class="column6">Quantity</th>';
 echo "\n";
 echo '<th class="column7">Select</th>';
 echo "\n";
+echo "\n";
 echo '</tr>';
+echo "\n";
 echo "\n";
 echo '</thead>';
 echo "\n";
+echo "\n";
 echo '<tbody>';
+echo "\n";
 echo "\n";
 
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
     echo '<tr>';
+	echo "\n";
     	echo "<td>" . $row['Name'] . "</td>";
+	echo "\n";
         echo "<td>" . $row['Size'] . "</td>";
+	echo "\n";
         echo "<td>" . $row['Type'] . "</td>";
+	echo "\n";
         echo "<td>" . $row['Department'] . "</td>";
+	echo "\n";
 		echo "<td>" . $row['Location'] . "</td>";
+	echo "\n";
 		echo "<td>" . $row['Quantity'] . "</td>";
+	echo "\n";
 	echo "<td>";
+	echo "\n";
 	echo "</td>";
+	echo "\n";
+	echo "\n";
+	
     echo "</tr>";
+	echo "\n";
+	echo "\n";
   
 }
 echo "</tbody";
+echo "\n";
+echo "\n";
 echo "</table";
+echo "\n";
+echo "\n";
 
 sqlsrv_free_stmt($getResults);
 ?>
