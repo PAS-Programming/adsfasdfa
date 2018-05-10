@@ -18,13 +18,13 @@ if($conn === false)
 $query = $_GET['query'];
 
 // Prevents SQL Injection attacks. DO NOT CHANGE
-$query = htmlspecialchars($query); 
-$query = mysql_real_escape_string($query);
+//$query = htmlspecialchars($query); 
+//$query = mysql_real_escape_string($query);
 
 
 // We need to get name and quantity from inventory table by searching for %name%. Sorting options should be available in a button.
 
-$tsql= "SELECT * FROM dbo.inventory WHERE (`Name` LIKE '%".$query."%') OR (`Size` LIKE '%".$query."%') OR (`Type` LIKE '%".$query."%')";
+$tsql= "SELECT * FROM dbo.inventory WHERE Name Like ('%".$query."%')";
 $stm = sqlsrv_query($conn, $del);
 $getResults = sqlsrv_query($conn, $tsql);
 
