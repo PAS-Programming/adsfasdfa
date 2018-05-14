@@ -251,8 +251,8 @@ tbody tr:hover {
     line-height: 1.2;
     font-weight: unset;
     position: absolute;
-    width: 40%;
-    left: 30px;
+    width: 90%;
+    left: 24px;
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
@@ -279,13 +279,15 @@ tbody tr:hover {
 
   .column4,
   .column5,
-  .column6 {
+  .column6,
+  .column7{
     text-align: left;
   }
 
   .column4,
   .column5,
   .column6,
+  .column7,
   .column1,
   .column2,
   .column3 {
@@ -293,7 +295,7 @@ tbody tr:hover {
   }
 
   tbody tr {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
