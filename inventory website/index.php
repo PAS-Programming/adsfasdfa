@@ -102,7 +102,8 @@
 			
 			/*Gradient background*/
 			body {
-				background: linear-gradient(to bottom, rgba(153,212, 249, 1) 27%, rgba(25,75, 182, 0) 100%);
+				background: #ABE9FF;
+				background: linear-gradient(45deg, #508DFF, #B8D1FF);
 				height: 100%;
 				margin: 0;
 				background-repeat: no-repeat;
@@ -115,7 +116,7 @@
 	</head>
 	
 	<body style="background-color:#BDD8E3">
-		
+		<?php $current_url = explode("?", $_SERVER['REQUEST_URI']);?>
 		<!-- Main title area -->
 		<div class="title" style="padding-top:2.5%">
 			<center style="font-size:7vw">PAS Science Inventory</center>
@@ -126,6 +127,8 @@
 			<center>
 				<form class="search" method="GET" action="search.php" style="margin:auto;max-width:800px">
 					<input type="text" placeholder="Enter Keyword..." name="query">
+					<!-- search by category buttons -->
+					<input name="department" value="<?php echo $_GET["department"]?>" type="hidden">
 					<button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
 				</form>
 			</center>
@@ -136,52 +139,58 @@
 			<table class="categorytable" style="margin:auto;max-width:850px; padding-top:2%">
 				<tr>
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to chemistry')">
-							<i class="fab fa-react">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=Chemistry"?>>
+							<button class="cat" id="chem" type="button" onclick="alert('Now searching only Chemistry')">
+							<i class="fab fa-react"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">Chemistry</span></div>
 					</td>
 					
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to physics')">
-							<i class="fas fa-truck-loading">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=Physics"?>>
+							<button class="cat" id="phys" type="button" onclick="alert('Now searching only Physics')">
+							<i class="fas fa-truck-loading"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">Physics</span></div>
 					</td>
 					
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to General')">
-							<i class="fas fa-cog">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=General"?>>
+							<button class="cat" id="gene" type="button" onclick="alert('Now searching only General')">
+							<i class="fas fa-cog"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">General</span></div>
 					</td>
 				</tr>
 				
 				<tr>
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Biology')">
-							<i class="fas fa-dna">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=Biology"?>>
+							<button class="cat" id="biol" type="button" onclick="alert('Now searching only Biology')">
+							<i class="fas fa-dna"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">Biology</span></div>
 					</td>
 					
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Elementary')">
-							<i class="fas fa-child">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=Elementary"?>>
+							<button class="cat" id="elem" type="button" onclick="alert('Now searching only Elementary')">
+							<i class="fas fa-child"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">Elementary</span></div>
 					</td>
 					
 					<td class="categorytable"><div class="tooltip">
-						<button class="cat" type="button" onclick="alert('there will be javascript here to perform an advanced querey relating to Misc')">
-							<i class="far fa-question-circle">
-							</i>
-						</button>
+						<a href=<?php echo $current_url[0]."?department=Misc"?>>
+							<button class="cat" id="misc" type="button" onclick="alert('Now searching only Misc')">
+							<i class="far fa-question-circle"></i>
+							</button>
+						</a>
 						<span class="tooltiptext">Misc</span></div>
 						</td>
 				</tr>

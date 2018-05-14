@@ -16,6 +16,7 @@ if($conn === false)
 
 // Takes input from form through GET method and stores it in a variable called query
 $query = $_GET['query'];
+$department = $_GET['department'];
 
 // Prevents SQL Injection attacks.
 //$query = htmlspecialchars($query);
@@ -23,8 +24,11 @@ $query = $_GET['query'];
 
 
 // We need to get name and quantity from inventory table by searching for %name%. Sorting options should be available in a button.
-
-$tsql= "SELECT * FROM dbo.inventory WHERE (Name LIKE ('%".$query."%')) OR (Type LIKE ('%".$query."%'))";
+if(isset($_GET["department"])){
+	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%'))) OR ((Type LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%'))) OR ((Size LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%')))";
+}else{
+	$tsql= "SELECT * FROM dbo.inventory WHERE (Name LIKE ('%".$query."%')) OR (Type LIKE ('%".$query."%'))";
+}
 $stm = sqlsrv_query($conn, $del);
 $getResults = sqlsrv_query($conn, $tsql);
 
@@ -124,17 +128,17 @@ echo "\n";
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
     echo '<tr>';
 	echo "\n";
-    	echo "<td>" . $row['Name'] . "</td>";
+    	echo "<td>" . $row['Name'] . " </td>";
 	echo "\n";
-        echo "<td>" . $row['Size'] . "</td>";
+        echo "<td>" . $row['Size'] . " </td>";
 	echo "\n";
-        echo "<td>" . $row['Type'] . "</td>";
+        echo "<td>" . $row['Type'] . " </td>";
 	echo "\n";
-        echo "<td>" . $row['Department'] . "</td>";
+        echo "<td>" . $row['Department'] . " </td>";
 	echo "\n";
-		echo "<td>" . $row['Location'] . "</td>";
+		echo "<td>" . $row['Location'] . " </td>";
 	echo "\n";
-		echo "<td>" . $row['Quantity'] . "</td>";
+		echo "<td>" . $row['Quantity'] . " </td>";
 	echo "\n";
 	echo "<td>";
 	echo "\n";
