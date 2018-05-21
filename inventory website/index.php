@@ -103,7 +103,7 @@
 			/*Gradient background*/
 			body {
 				background: #ABE9FF;
-				background: linear-gradient(45deg, #508DFF, #B8D1FF);
+				background: linear-gradient(#508DFF, #B8D1FF);
 				height: 100%;
 				margin: 0;
 				background-repeat: no-repeat;
