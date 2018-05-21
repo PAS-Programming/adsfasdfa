@@ -103,7 +103,7 @@
 			/*Gradient background*/
 			body {
 				background: #ABE9FF;
-				background: linear-gradient(#508DFF, #B8D1FF);
+				background: linear-gradient(#A6D2EF, #75B2EF);
 				height: 100%;
 				margin: 0;
 				background-repeat: no-repeat;
@@ -121,6 +121,7 @@
 		<div class="title" style="padding-top:2.5%">
 			<center style="font-size:7vw">PAS Science Inventory</center>
 		</div>
+		
 		
 		<!-- Main search bar -->
 		<div class="searchbar" style="padding-top:1.5%">
