@@ -19,6 +19,13 @@
 	box-sizing: border-box;
 }
 
+::selection {
+  background: #B8E0D2; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #B8E0D2; /* Gecko Browsers */
+}
+
 body, html {
 	height: 100%;
 	font-family: sans-serif;

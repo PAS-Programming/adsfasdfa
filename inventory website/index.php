@@ -42,6 +42,14 @@
 				background: #f1f1f1;
 			}
 			
+			::selection {
+				background: #B8E0D2; /* WebKit/Blink Browsers */
+			}
+			
+			::-moz-selection {
+				background: #B8E0D2; /* Gecko Browsers */
+			}
+			
 			/*search button style*/
 			form.search button {
 				float: left;
