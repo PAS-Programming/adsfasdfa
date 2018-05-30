@@ -1,0 +1,67 @@
+/*
+All Color Schemes Defined Here 
+*/
+
+
+/*----- Style - theme2 ------*/
+
+.theme2 #menu{background-color: transparent;}
+.theme2 #menu ul{background-color: #303030;}
+.theme2 #menu a span i{background: none repeat scroll 0 0 #0299D3; box-shadow: 0 0 0 2px #303030;}
+.theme2 #menu li:hover > a {color: black;}	
+.theme2 #menu li {color: black;}	
+.theme2	#menu ul li:first-child > a:after {
+		content: '';
+		position: absolute;
+		left: 40px;
+		top: -11px;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #303030;
+	}
+	
+.theme2	#menu ul ul li:first-child a:after {
+		left: -6px;
+		top: 50%;
+		margin-top: -6px;
+		border-left: 0;	
+		border-bottom: 7px solid transparent;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #303030;
+	}
+	
+.theme2	#menu ul li:first-child a:hover:after {
+		border-bottom-color: #303030; 
+	}
+	
+.theme2	#menu ul ul li:first-child a:hover:after {
+		border-right-color: #303030; 
+		border-bottom-color: transparent; 	
+	}
+
+.theme2	#menu ul a:hover {
+		background-color: #0299D3;
+		color:#fff;
+	}
+	
+@media screen and (max-width: 960px) {
+	.theme2 #menu ul{border-top:6px solid #0299D3;}
+}
+
+	
+@media screen and (max-width: 600px) {
+	.theme2 #menu-trigger {background:url(../images/menu.png) no-repeat scroll 10px center #303030;}
+	.theme2 #menu{border-radius:6px;}
+	.theme2 #menu ul{border-top:none;}
+	.theme2 #menu ul li:first-child > a:after{border-bottom:none; border-left:none;}
+	.theme2 #menu:after {
+			content: '';
+			
+			left: 25px;
+			top: -8px;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #303030;
+		}
+	.theme2 #menu ul ul li:first-child a:after{border-bottom:none; border-left:none; border-color:none; border-style:none;}
+}

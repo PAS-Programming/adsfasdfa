@@ -16,9 +16,15 @@
 		
 		<!-- Stylesheets -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+		
 		<!-- Icons Script -->
 		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+		
+		<!-----Common CSS------->
+		<link rel="stylesheet" type="text/css" href="dropcss/menu-style.css">
+		
+		<!-----Different Color Themes------->
+		<link rel="stylesheet" type="text/css" href="dropcss/themes.css">	
 		
 		<style>
 			/*mobile*/
@@ -118,6 +124,7 @@
 				background-attachment: fixed;
 			}
 			
+			
 		</style>
 		
 		
@@ -131,8 +138,88 @@
 		</div>
 		
 		
+		<!-- DropDown Menubarrr -->
+		<div id="main-container" class="theme2">
+<nav id="menu-wrap">    
+	<ul id="menu">
+		<li><a href="/">Department</a>
+			<ul>
+				<li><a href="">Biology</a></li>
+				<li><a href="">Chemistry</a></li>
+				<li><a href="">Physics</a></li>
+				<li><a href="">Elementary</a></li>
+				<li><a href="">General</a></li>
+				<li><a href="">Miscellaneous</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/">Material</a>
+			<ul>
+				<li><a href="">Rock</a></li>
+				<li><a href="">Weed</a></li>
+				<li><a href="">Metal</a></li>
+				<li><a href="">Plastic</a></li>
+				<li><a href="">Rubber</a></li>
+				<li><a href="">Glass</a></li>
+				<li><a href="">Aluminium</a></li>
+				<li><a href="">Styrofoam</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/">Type</a>
+			<ul>
+				<li><a href="">Book</a></li>
+				<li><a href="">Kit</a></li>
+				<li><a href="">Lab</a></li>
+				<li><a href="">Set</a></li>
+				<li><a href="">Sample</a></li>
+				<li><a href="">Manual</a></li>
+				<li><a href="">Pipet</a></li>
+				<li><a href="">Seed</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/">Volume</a>
+			<ul>
+				<li><a href="">1ml</a></li>
+				<li><a href="">5ml</a></li>
+				<li><a href="">10ml</a></li>
+				<li><a href="">20ml</a></li>
+				<li><a href="">25ml</a></li>
+				<li><a href="">30ml</a></li>
+				<li><a href="">50ml</a></li>
+				<li><a href="">100ml</a></li>
+				<li><a href="">180ml</a></li>
+				<li><a href="">200ml</a></li>
+				<li><a href="">220ml</a></li>
+				<li><a href="">250ml</a></li>
+				<li><a href="">275ml</a></li>
+				<li><a href="">500ml</a></li>
+				<li><a href="">600ml</a></li>
+				<li><a href="">1000ml</a></li>
+				<li><a href="">2000ml</a></li>
+			</ul>
+		</li>
+		
+		<li><a href="/">Colour</a>
+			<ul>
+				<li><a href="">Green</a></li>
+				<li><a href="">Black</a></li>
+				<li><a href="">Red</a></li>
+				<li><a href="">White</a></li>
+				<li><a href="">Blue</a></li>
+				<li><a href="">Yellow</a></li>
+				<li><a href="">Clear</a></li>
+				<li><a href="">Pink</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</nav>
+</div>
+		
 		<!-- Main search bar -->
-		<div class="searchbar" style="padding-top:1.5%">
+		<div class="searchbar">
 			<center>
 				<form class="search" method="GET" action="search.php" style="margin:auto;max-width:800px">
 					<input type="text" placeholder="Enter Keyword..." name="query">
@@ -206,6 +293,29 @@
 			</table>
 		</div>
 		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+		if ($.browser.msie && $.browser.version.substr(0,1)<7)
+		{
+		$('li').has('ul').mouseover(function(){
+			$(this).children('ul').css('visibility','visible');
+			}).mouseout(function(){
+			$(this).children('ul').css('visibility','hidden');
+			})
+		}
+
+		/* Mobile */
+		$('#menu-wrap').prepend('<div id="menu-trigger">Menu</div>');		
+		$("#menu-trigger").on("click", function(){
+			$("#menu").slideToggle();
+		});
+
+		// iPad
+		var isiPad = navigator.userAgent.match(/iPad/i) != null;
+		if (isiPad) $('#menu ul').addClass('no-transition');      
+    });       	  
+</script>
 	</body>
 	
 </html>

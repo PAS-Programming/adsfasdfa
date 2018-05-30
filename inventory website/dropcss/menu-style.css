@@ -1,0 +1,341 @@
+/*
+Commom CSS for Menu
+Responsive CSS
+*/
+
+	/* You don't need the above styles, they are demo-specific ----------- */
+	
+	#main-container{
+		width:650px;
+		margin:0 auto;
+	}
+	
+	#menu, #menu ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	#menu {
+		width: 100%;
+		margin: 60px auto;
+	}
+	
+	#menu:before,
+	#menu:after {
+		content: "";
+		display: table;
+	}
+	
+	#menu:after {
+		clear: both;
+	}
+	
+	#menu {
+		zoom:1;
+		padding-left:15px;
+		background-color: #34495E;
+	}
+	
+	#menu li {
+		float: left;
+		position: relative;
+		margin-left: 2.4%;
+		margin-right: 2.4%;
+		padding-bottom:5px;
+	}
+	
+	#menu a {
+		float: left;
+		/*padding: 15px 20px;*/
+		width:90px;
+		line-height:30px;
+		color: #fff;
+		font-size:13px;
+		font-family: 'Open Sans', sans-serif;
+		text-decoration: none;
+		margin-top:-20px;
+		text-align:center;
+	}
+	
+	#menu a span{
+		clear:both;
+		display:block;
+		position:relative;
+		top:-0px;
+		text-align:center;
+	}
+	
+	#menu a span i{width:30px; height:30px; background:#1BBC9B; vertical-align:middle; line-height:30px; font-size:18px; border-radius:50%; border:1px solid #fff; box-shadow:0px 0px 0px 2px #34495E;}
+	
+	#menu li:hover > a {
+		color: #1BBC9B;
+	}
+	
+	#menu li:hover > a  i{
+		color: #fff;
+	}
+	
+	*html #menu li a:hover { /* IE6 only */
+		color: #fafafa;
+	}
+	
+	#menu ul {
+		margin: 20px 0 0 0;
+		_margin: 0; /*IE6 only*/
+		opacity: 0;
+		background-color: #34495E;
+		visibility: hidden;
+		position: absolute;
+		top: 58px;
+		left: 0;
+		z-index: 1;    
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+		-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;  
+	}
+
+	#menu li:hover > ul {
+		opacity: 1;
+		visibility: visible;
+		margin: 0;
+	}
+	
+	#menu ul ul {
+		top: 0;
+		left: 160px;
+		margin: 0 0 0 20px;
+		_margin: 0; /*IE6 only*/
+		-moz-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+		-webkit-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+		box-shadow: -1px 0 0 rgba(255,255,255,.3);		
+	}
+	
+	#menu ul li {
+		float: none;
+		display: block;
+		border: 0;
+		_line-height: 0; /*IE6 only*/	
+		padding-bottom:0px;	
+	}
+	
+	#menu ul li:last-child {   
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;    
+	}
+	
+	#menu ul a {    
+		padding: 5px;
+		width: 130px;
+		_height: 10px; /*IE6 only*/
+		display: block;
+		white-space: nowrap;
+		float: none;
+		text-transform: none;
+		margin:5px;
+		text-align:left;
+		line-height:20px;
+	}
+	
+	#menu ul a:hover {
+		border-radius:3px;
+	}
+	
+	.right-arr{
+		line-height:23px !important;
+		float:right;
+		position:absolute;
+		right:10px;
+	}
+	
+	/* Mobile */
+	#menu-trigger {
+		display: none;
+	}
+	
+	.note{
+		font-size:20px;
+	}
+	
+	@media screen and (max-width: 960px) {
+		#menu {padding-left: 0px;}
+		#menu a{margin-top:10px;}
+		#main-container{width:90%;}
+		#menu li{width:20%;border-bottom: 1px solid rgba(0,0,0,0.3);
+    	box-shadow: 0px 1px 0 rgba(255,255,255,0.2);}
+		#menu ul{top:80px; border-top:6px solid #1BBC9B; box-shadow:0px 0px 1px 1px rgba(0,0,0,0.3); }
+		#menu ul li{width:auto; border-bottom:none; box-shadow:none;}
+		#menu ul ul{left:90px;}
+	}
+	
+	@media screen and (max-width: 600px) {
+
+		/* nav-wrap */
+		#menu-wrap {
+			position: relative;
+		}
+
+		#menu-wrap * {
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+		/* menu icon */
+		#menu-trigger {
+			display: block; /* show menu icon */
+			height: 45px;
+			line-height: 40px;
+			cursor: pointer;		
+			padding: 0 0 0 35px;
+			color: #fafafa;
+			font-weight: bold;
+			background-color: #111;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+		}
+		
+		/* main nav */
+		#menu {
+			margin: 0; 
+			
+			top: 55px;
+			width: 100%;
+			z-index: 1;
+			background-color: #444;
+			display: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;		
+		}
+
+			
+
+		#menu ul {
+			position: static;
+			display:none;
+			opacity: 0;
+			margin: 0;
+			background: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			-webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		-o-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;				
+		}
+		
+		#menu li:hover ul{
+			display:block;
+			opacity: 1;
+		}
+
+		#menu ul ul {
+			margin: 0 0 0 20px !important;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			display:none;
+			visibility:visible;	
+		}
+
+		#menu a{
+			width:auto;	
+			text-align:left;
+		}
+		
+		#menu a span{
+			clear:none;
+			float:left;
+			margin-right:5px;
+		}
+
+		#menu li {
+			position: static;
+			display: block;
+			float: none;
+			border: 0;
+			width:100%;		
+			padding-left:10px;
+		}
+
+		#menu ul{
+			border-top:none;
+		}
+		
+		#menu ul li{
+			margin-left: 20px;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;		
+		}
+
+		#menu a{
+			display: block;
+			float: none;
+			padding: 0;
+			color: #fff;
+		}
+
+		#menu a:hover{
+			color: #fafafa;
+		}	
+
+		#menu ul a{
+			padding: 5px;
+			width: auto;		
+		}
+
+		#menu ul a:hover{
+			background: none;	
+		}
+
+		#menu ul li:first-child a:after,
+		#menu ul ul li:first-child a:after {
+			border: 0;
+		}	
+		
+		
+		
+		.right-arr{
+		line-height:23px !important;
+		float:right;
+		position:absolute;
+		right:auto;
+		padding-left:10px;
+		}
+		
+		
+							
+	}
+
+	@media screen and (min-width: 600px) {
+		#menu {
+			display: block !important;
+		}
+	}	
+
+	/* iPad */
+	.no-transition {
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		-o-transition: none;
+		transition: none;
+		opacity: 1;
+		visibility: visible;
+		display: none;  		
+	}
+
+	#menu li:hover > .no-transition {
+		display: block;
+	}
