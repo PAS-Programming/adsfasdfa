@@ -19,6 +19,7 @@ $query = $_GET['query'];
 $department = $_GET['department'];
 $material = $_GET['material'];
 $itemtype = $_GET['type'];
+$colour = $_GET['colour'];
 
 // Prevents SQL Injection attacks.
 //$query = htmlspecialchars($query);
@@ -37,6 +38,10 @@ else if(isset($_GET["material"]))
 else if(isset($_GET["type"]))
 {
 	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%'))) OR ((Size LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%'))) OR ((Department LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%')))";
+}
+else if(isset($_GET["colour"]))
+{
+	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Colour LIKE ('%".$colour."%'))) OR ((Type LIKE ('%".$query."%')) AND (Colour LIKE ('%".$colour."%'))) OR ((Size LIKE ('%".$query."%')) AND (Colour LIKE ('%".$colour."%')))";
 }
 else
 {

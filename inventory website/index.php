@@ -232,6 +232,7 @@
 					<input name="department" value="<?php echo $_GET["department"]?>" type="hidden">
 					<input name="material" value="<?php echo $_GET["material"]?>" type="hidden">
 					<input name="type" value="<?php echo $_GET["type"]?>" type="hidden">
+					<input name="colour" value="<?php echo $_GET["colour"]?>" type="hidden">
 					<button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
 				</form>
 			</center>
