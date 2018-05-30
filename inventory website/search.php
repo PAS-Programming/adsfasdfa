@@ -14,9 +14,11 @@ if($conn === false)
     die(print_r(sqlsrv_errors(), true));
 }
 
-// Takes input from form through GET method and stores it in a variable called query
+// Takes input from form through GET method and stores it in variables
 $query = $_GET['query'];
 $department = $_GET['department'];
+$material = $_GET['material'];
+$itemtype = $_GET['type'];
 
 // Prevents SQL Injection attacks.
 //$query = htmlspecialchars($query);
@@ -24,9 +26,20 @@ $department = $_GET['department'];
 
 
 // We need to get name and quantity from inventory table by searching for %name%. Sorting options should be available in a button.
-if(isset($_GET["department"])){
+if(isset($_GET["department"]))
+{
 	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%'))) OR ((Type LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%'))) OR ((Size LIKE ('%".$query."%')) AND (Department LIKE ('%".$department."%')))";
-}else{
+}
+else if(isset($_GET["material"]))
+{
+	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Material LIKE ('%".$material."%'))) OR ((Type LIKE ('%".$query."%')) AND (Material LIKE ('%".$material."%'))) OR ((Size LIKE ('%".$query."%')) AND (Material LIKE ('%".$material."%')))";
+}
+else if(isset($_GET["type"]))
+{
+	$tsql= "SELECT * FROM dbo.inventory WHERE ((Name LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%'))) OR ((Size LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%'))) OR ((Department LIKE ('%".$query."%')) AND (Type LIKE ('%".$itemtype."%')))";
+}
+else
+{
 	$tsql= "SELECT * FROM dbo.inventory WHERE (Name LIKE ('%".$query."%')) OR (Type LIKE ('%".$query."%'))";
 }
 $stm = sqlsrv_query($conn, $del);

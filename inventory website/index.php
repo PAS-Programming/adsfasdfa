@@ -142,44 +142,47 @@
 		<div id="main-container" class="theme2">
 <nav id="menu-wrap">    
 	<ul id="menu">
-		<li><a href="/">Department</a>
+		<li><a>Department</a>
 			<ul>
-				<li><a href="">Biology</a></li>
-				<li><a href="">Chemistry</a></li>
-				<li><a href="">Physics</a></li>
-				<li><a href="">Elementary</a></li>
-				<li><a href="">General</a></li>
-				<li><a href="">Miscellaneous</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=Biology"?>>Biology</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=Chemistry"?>>Chemistry</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=Physics"?>>Physics</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=Elementary"?>>Elementary</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=General"?>>General</a></li>
+				<li><a href=<?php echo $current_url[0]."?department=Misc"?>>Miscellaneous</a></li>
+				<li><a href=<?php echo $current_url[0].""?>>Reset</a></li>
 			</ul>
 		</li>
 		
-		<li><a href="/">Material</a>
+		<li><a>Material</a>
 			<ul>
-				<li><a href="">Rock</a></li>
-				<li><a href="">Weed</a></li>
-				<li><a href="">Metal</a></li>
-				<li><a href="">Plastic</a></li>
-				<li><a href="">Rubber</a></li>
-				<li><a href="">Glass</a></li>
-				<li><a href="">Aluminium</a></li>
-				<li><a href="">Styrofoam</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Rock"?>>Rock</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Weed"?>>Weed</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Metal"?>>Metal</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Plastic"?>>Plastic</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Rubber"?>>Rubber</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Glass"?>>Glass</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Aluminium"?>>Aluminium</a></li>
+				<li><a href=<?php echo $current_url[0]."?material=Styrofoam"?>>Styrofoam</a></li>
+				<li><a href=<?php echo $current_url[0].""?>>Reset</a></li>
 			</ul>
 		</li>
 		
-		<li><a href="/">Type</a>
+		<li><a>Type</a>
 			<ul>
-				<li><a href="">Book</a></li>
-				<li><a href="">Kit</a></li>
-				<li><a href="">Lab</a></li>
-				<li><a href="">Set</a></li>
-				<li><a href="">Sample</a></li>
-				<li><a href="">Manual</a></li>
-				<li><a href="">Pipet</a></li>
-				<li><a href="">Seed</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Book"?>>Book</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Kit"?>>Kit</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Lab"?>>Lab</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Set"?>>Set</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Sample"?>>Sample</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Manual"?>>Manual</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Pipet"?>>Pipet</a></li>
+				<li><a href=<?php echo $current_url[0]."?type=Seed"?>>Seed</a></li>
+				<li><a href=<?php echo $current_url[0].""?>>Reset</a></li>
 			</ul>
 		</li>
 		
-		<li><a href="/">Volume</a>
+		<li><a>Volume</a>
 			<ul>
 				<li><a href="">1ml</a></li>
 				<li><a href="">5ml</a></li>
@@ -198,19 +201,21 @@
 				<li><a href="">600ml</a></li>
 				<li><a href="">1000ml</a></li>
 				<li><a href="">2000ml</a></li>
+				<li><a href=<?php echo $current_url[0].""?>>Reset</a></li>
 			</ul>
 		</li>
 		
-		<li><a href="/">Colour</a>
+		<li><a>Colour</a>
 			<ul>
-				<li><a href="">Green</a></li>
-				<li><a href="">Black</a></li>
-				<li><a href="">Red</a></li>
-				<li><a href="">White</a></li>
-				<li><a href="">Blue</a></li>
-				<li><a href="">Yellow</a></li>
-				<li><a href="">Clear</a></li>
-				<li><a href="">Pink</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Green"?>>Green</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Black"?>>Black</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Red"?>>Red</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=White"?>>White</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Blue"?>>Blue</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Yellow"?>>Yellow</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Clear"?>>Clear</a></li>
+				<li><a href=<?php echo $current_url[0]."?colour=Pink"?>>Pink</a></li>
+				<li><a href=<?php echo $current_url[0].""?>>Reset</a></li>
 			</ul>
 		</li>
 
@@ -225,73 +230,13 @@
 					<input type="text" placeholder="Enter Keyword..." name="query">
 					<!-- search by category buttons -->
 					<input name="department" value="<?php echo $_GET["department"]?>" type="hidden">
+					<input name="material" value="<?php echo $_GET["material"]?>" type="hidden">
+					<input name="type" value="<?php echo $_GET["type"]?>" type="hidden">
 					<button type="submit" name="submit" value="Search"><i class="fa fa-search"></i></button>
 				</form>
 			</center>
 		</div>
 		
-		<!-- Category buttons -->
-		<div class="categories">
-			<table class="categorytable" style="margin:auto;max-width:850px; padding-top:2%">
-				<tr>
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=Chemistry"?>>
-							<button class="cat" id="chem" type="button" onclick="alert('Now searching only Chemistry')">
-							<i class="fab fa-react"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">Chemistry</span></div>
-					</td>
-					
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=Physics"?>>
-							<button class="cat" id="phys" type="button" onclick="alert('Now searching only Physics')">
-							<i class="fas fa-truck-loading"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">Physics</span></div>
-					</td>
-					
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=General"?>>
-							<button class="cat" id="gene" type="button" onclick="alert('Now searching only General')">
-							<i class="fas fa-cog"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">General</span></div>
-					</td>
-				</tr>
-				
-				<tr>
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=Biology"?>>
-							<button class="cat" id="biol" type="button" onclick="alert('Now searching only Biology')">
-							<i class="fas fa-dna"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">Biology</span></div>
-					</td>
-					
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=Elementary"?>>
-							<button class="cat" id="elem" type="button" onclick="alert('Now searching only Elementary')">
-							<i class="fas fa-child"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">Elementary</span></div>
-					</td>
-					
-					<td class="categorytable"><div class="tooltip">
-						<a href=<?php echo $current_url[0]."?department=Misc"?>>
-							<button class="cat" id="misc" type="button" onclick="alert('Now searching only Misc')">
-							<i class="far fa-question-circle"></i>
-							</button>
-						</a>
-						<span class="tooltiptext">Misc</span></div>
-						</td>
-				</tr>
-			</table>
-		</div>
 		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">

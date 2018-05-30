@@ -18,13 +18,12 @@ Responsive CSS
 	
 	#menu {
 		width: 100%;
-		margin: 60px auto;
+		margin: 4% auto;
 	}
 	
 	#menu:before,
 	#menu:after {
 		content: "";
-		display: table;
 	}
 	
 	#menu:after {
@@ -87,7 +86,7 @@ Responsive CSS
 		background-color: #34495E;
 		visibility: hidden;
 		position: absolute;
-		top: 58px;
+		top: 17px;
 		left: 0;
 		z-index: 1;    
 		-moz-border-radius: 3px;
